@@ -1,0 +1,71 @@
+/* This imports the font for the credits section. */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+/* This imports the official Genshin Impact font 
+found inside the Game Files.*/
+@font-face {
+    font-family: "Genshin";
+    src: url(/asset/genshin.ttf);
+}
+
+/* This manages the Media Query (aka mobile support). */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    #text {
+        /* The !important helps the property to be prioritized first. */
+        font-size: 1vh !important;
+        /* This adjusts Fischl's image so you could see her. */
+        background-position-x: 24% !important;
+    }
+
+}
+
+/* this modifies the body and the html. */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+/* this is the container of the text. This adds the extra padding
+on all sides of the page. */
+.container {
+    padding: 1em;
+}
+
+/* This handles the actual text and Fischl's image. */
+#text {
+    font-family: "Genshin";
+    /* I chose 1vw so it could fit on other devices. */
+    font-size: 1vw;
+    /* Justifies the text */
+    text-align: justify;
+    /* Fishcl's Image */
+    background: url('./asset/image.png');
+    /* this helps the image to not repeat and 
+    cover the entire text with just the Prinzessin */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    /* the ✨secret✨ */
+    background-clip: text;
+    /* webkit / chrome compatability */
+    -webkit-background-clip: text;
+    /* so you can see Fischl von Luftschloss Narfidort and not a white text. */
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* yeah. */
+.credit{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.288);
+    text-align: end;
+}
+
+a {
+    color: inherit;
+}
